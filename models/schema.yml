@@ -1,0 +1,52 @@
+version: 2
+models:
+  - name: fct_sales
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "Total_Revenue >= 0"
+    columns:
+      - name: Reference ID
+        data_type: text
+        data-tests:
+          - not_null
+        quote: true
+      - name: Product Name
+        data_type: text
+        data-tests:
+          - not_null
+        quote: true
+      - name: sales_agent_list
+        data_type: array
+      - name: Country
+        data_type: text
+        quote: true
+      - name: Campaign Name
+        data_type: text
+        quote: true
+      - name: Source
+        data_type: text
+        quote: true
+      - name: total_revenue
+        data_type: double precision
+      - name: rebill_revenue
+        data_type: double precision
+      - name: rebill_count
+        data_type: bigint
+      - name: discount_sum
+        data_type: double precision
+      - name: returned_sum
+        data_type: double precision
+      - name: order_date_kyiv
+        data_type: text
+      - name: order_date_utc
+        data_type: timestamp without time zone
+      - name: order_date_ny
+        data_type: timestamp without time zone
+      - name: return_date_kyiv
+        data_type: text
+      - name: return_date_utc
+        data_type: timestamp without time zone
+      - name: return_date_ny
+        data_type: timestamp without time zone
+      - name: days_to_return
+        data_type: numeric
