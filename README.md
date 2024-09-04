@@ -1,9 +1,9 @@
-Welcome to your new dbt project!
+# Test Assignment for Bohdan Shybetskyi
 
-### Using the starter project
+## Overview
 
-Try running the following commands:
-- dbt run
-- dbt test
+This repository contains the SQL models and tests developed as part of a test assignment. The objective was to analyze sales data, calculate key metrics, and validate the integrity of the data using dbt (Data Build Tool).
 
+## Database
 
+This project was developed and tested using a local PostgreSQL server.
